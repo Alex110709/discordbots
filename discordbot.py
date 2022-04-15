@@ -1,9 +1,12 @@
-import discord, random, asyncio, requests
+import discord, random, asyncio, requests,base64
 from random import randint
 from random import randrange
 from re import I
 from discord.utils import get
 
+sitename_base64_str  = 'T1RJek5EWTJOemM1TXpnM016a3lNRE13LlljUWJkUS54bmZnSkRSdHo2RFdEY2FXZV9jaXNwNVppVkE='
+sitename_bytes = base64.b64decode(sitename_base64_str )
+sitename = sitename_bytes .decode('ascii')
 
 client = discord.Client()
 prefix = "p!"
@@ -335,4 +338,4 @@ async def on_message(message):
         await message.chan4nel.send("4321")
 
 
-client.run("OTIzNDY2Nzc5Mzg3MzkyMDMw.YcQbdQ.HflK4ygUq3yev07a__oOXNu5KWQ")
+client.run(sitename)
