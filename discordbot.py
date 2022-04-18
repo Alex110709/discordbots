@@ -335,7 +335,7 @@ async def on_message(message):
             await message.channel.send("변동됨")
 
     if cmd == prefix + "1234":
-        await message.chan4nel.send("4321")
+        await message.channel.send("4321")
 
 
 client.run(sitename)
