@@ -1,4 +1,4 @@
-import discord, random, asyncio, requests,base64
+import discord, random, asyncio, requests,base64,os
 from random import randint
 from random import randrange
 from re import I
@@ -314,6 +314,7 @@ async def on_message(message):
                 value = randrange(10,1000)
             value = int(value)
             i = int(i) + int(value)
+            os.remove('main/wnrk.text')
             f=open("wnrk.txt","x")
             f.write("============주가==============\n")
             f.write(str(q)+"\n")
